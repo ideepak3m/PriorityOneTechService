@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/PriorityOneTechService', // Set base for GitHub Pages (disabled for preview)
+  base: '/', // Set base for GitHub Pages (disabled for preview)
   server: {
     host: "::",
     port: 8080,
