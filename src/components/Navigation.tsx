@@ -10,14 +10,14 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <img 
-                src={logoFull} 
-                alt="Priority One Tech Service" 
+              <img
+                src={logoFull}
+                alt="Priority One Tech Service"
                 className="h-8 w-auto"
               />
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
