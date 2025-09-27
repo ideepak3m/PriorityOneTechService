@@ -9,7 +9,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/">
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
                 src={logoFull} 
                 alt="Priority One Tech Service" 
