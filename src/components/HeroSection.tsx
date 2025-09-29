@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import { HashLink } from "react-router-hash-link"; // ✅ correct
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -37,12 +39,16 @@ const HeroSection = () => {
           
           {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="yellow" size="lg" className="text-lg px-8 py-4">
-              Get a Free AI Audit
-            </Button>
-            <Button variant="hero-outline" size="lg" className="text-lg px-8 py-4">
-              View Our Work
-            </Button>
+            <HashLink smooth to="/#contact" className="hidden md:block">
+              <Button variant="yellow" size="lg" className="text-lg px-8 py-4">
+                Get a Free AI Audit
+              </Button>
+            </HashLink>
+            <Link to="/portfolio" className="hidden md:block">
+              <Button variant="hero-outline" size="lg" className="text-lg px-8 py-4">
+                View Our Work
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

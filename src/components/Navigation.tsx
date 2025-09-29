@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logoFull from "@/assets/logo-full.png";
+import { HashLink } from "react-router-hash-link"; // ✅ correct
+
 
 const Navigation = () => {
   return (
@@ -21,26 +23,30 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link to="/#services" className="text-foreground hover:text-accent px-3 py-2 text-sm font-medium transition-colors">
+              <HashLink smooth to="/#services" className="text-foreground hover:text-accent px-3 py-2 text-sm font-medium transition-colors">
                 Services
-              </Link>
+              </HashLink>
               <Link to="/about" className="text-foreground hover:text-accent px-3 py-2 text-sm font-medium transition-colors">
                 About
               </Link>
               <Link to="/portfolio" className="text-foreground hover:text-accent px-3 py-2 text-sm font-medium transition-colors">
                 Portfolio
               </Link>
-              <Link to="/#contact" className="text-foreground hover:text-accent px-3 py-2 text-sm font-medium transition-colors">
+              <HashLink smooth to="/#contact" className="text-foreground hover:text-accent px-3 py-2 text-sm font-medium transition-colors">
                 Contact
-              </Link>
+              </HashLink>
             </div>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Get Free AI Audit
-            </Button>
+            {/* CTA Button */}
+            <HashLink smooth to="/#contact" className="hidden md:block">
+              <Button variant="hero" size="sm">
+                Get Free AI Audit
+              </Button>
+            </HashLink>
+
           </div>
 
           {/* Mobile menu button */}
