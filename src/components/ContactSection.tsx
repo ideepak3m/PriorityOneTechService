@@ -14,6 +14,7 @@ import { Phone, MessageSquare, CheckCircle } from "lucide-react";
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(10, "Phone number must be at least 10 characters"),
   businessType: z.string().min(1, "Please select your business type"),
   message: z.string().min(10, "Message must be at least 10 characters"),
   aiAudit: z.boolean().default(false),
@@ -41,6 +42,7 @@ const ContactSection = () => {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       businessType: "",
       message: "",
       aiAudit: false,
@@ -163,6 +165,30 @@ const ContactSection = () => {
                       </FormItem>
                     )}
                   />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Phone Number</FormLabel>
+                        <FormControl>
+                          <Input type="tel" placeholder="(123) 456-7890" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* <FormField
+                    control={form.control}
+                    name="businessType"
+                    render={({ field }) => (
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  /> */}
 
                   <FormField
                     control={form.control}
