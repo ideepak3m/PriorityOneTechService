@@ -49,9 +49,20 @@ const ContactSection = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log("Form submitted:", data);
+      // // Simulate form submission
+      // await new Promise(resolve => setTimeout(resolve, 1000));
+      // console.log("Form submitted:", data);
+      const response = await fetch("https://ideepak3m.app.n8n.cloud/webhook-test/api/schedule-audit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
       
       setIsSubmitted(true);
       toast({
