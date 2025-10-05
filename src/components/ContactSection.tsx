@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, MessageSquare, CheckCircle } from "lucide-react";
+import { AIAudit_CONFIG } from "@/config/globals";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -54,7 +55,7 @@ const ContactSection = () => {
       // // Simulate form submission
       // await new Promise(resolve => setTimeout(resolve, 1000));
       // console.log("Form submitted:", data);
-      const response = await fetch("https://ideepak3m.app.n8n.cloud/webhook-test/api/schedule-audit", {
+      const response = await fetch(AIAudit_CONFIG.chatUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
