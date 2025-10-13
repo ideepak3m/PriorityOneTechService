@@ -13,3 +13,14 @@ export const CHAT_CONFIG = {
 export const AIAudit_CONFIG = {
     chatUrl: "https://n8n.srv1043251.hstgr.cloud/webhook-test/api/schedule-audit", // Replace with your actual chat URL
 };
+
+export const n8n_CONFIG = {
+    getTimeSlotsurl: "https://n8n.srv1043251.hstgr.cloud/webhook-test/get-availability-slots", // Replace with your actual chat URL
+    bookAppointmenturl: "https://n8n.srv1043251.hstgr.cloud/webhook-test/bookAppointment", // Replace with your actual chat URL
+    registerurl: "https://n8n.srv1043251.hstgr.cloud/webhook-test/register", // Replace with your actual chat URL
+    loginurl: "https://n8n.srv1043251.hstgr.cloud/webhook-test/login", // Replace with your actual chat URL
+    forgotpwdurl: "https://n8n.srv1043251.hstgr.cloud/webhook-test/forgot-password", // Replace with your actual chat URL
+    updatepwdurl: "https://n8n.srv1043251.hstgr.cloud/webhook-test/update-password", // Replace with your actual chat URL
+};
+
+
